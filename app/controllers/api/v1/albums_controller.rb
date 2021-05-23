@@ -1,16 +1,15 @@
-class AlbumsController < ApplicationController
+class Api::V1::AlbumsController < ApplicationController
   before_action :set_album, only: [:show]
 
-  # GET /albums
+  # GET /api/v1/albums
   def index
     @albums = Album.all
-
     render json: @albums
   end
 
-  # GET /albums/1
+  # GET /api/v1/albums/1
   def show
-    render json: @album
+    render json: { data: @album.songs.as_json(only: %w[name spotify_url preview_url duration_ms explicit ]) }
   end
 
 
