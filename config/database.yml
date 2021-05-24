@@ -6,7 +6,7 @@
 #
 default: &default
   user: <%= ENV.fetch("POSTGRES_USER") { 'postgres' } %>
-  password: <%= ENV.fetch("POSTGRES_USER") { 'password' }
+  password: <%= ENV.fetch("POSTGRES_PASSOWRD") { 'password' }
   encoding: UTF-8
   pool: 5
   adapter: postgresql
