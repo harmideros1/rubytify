@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a skill tests for ayenda.com developed by Harold Mideros
 
-Things you may want to cover:
+- To run the project you must be run the follow commands
 
-* Ruby version
+- <code> $ rails db:drop db:create db:migrate</code>
+- <code> $ rails server </code>
 
-* System dependencies
 
-* Configuration
+- To populate database with information from spotify, you need api credentials from https://developer.spotify.com/dashboard.
 
-* Database creation
+- <code>$ rails credentials:edit</code>
 
-* Database initialization
+and put your api spotify credentias as bellow
+<code>
+<br>
+potify:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;client_id: <your_client_id>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;client_secret: <your_client_secret>
+</code>
 
-* How to run the test suite
+finally you can execute the rake task
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- <code>$ rails fetch:spotify</code>
