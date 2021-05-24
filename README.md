@@ -13,15 +13,12 @@ This is a skill tests for ayenda.com developed by Harold Mideros
 - <code>$ rails credentials:edit</code>
 
 and put your api spotify credentias as bellow
-<code>
-<br>
-potify:
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;client_id: <your_client_id>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;client_secret: <your_client_secret>
-</code>
+
+```ruby
+spotify:
+  client_id: <your_client_id>
+  client_secret: <your_client_secret>
+```
 
 finally you can execute the rake task
-
 - <code>$ rails fetch:spotify</code>
